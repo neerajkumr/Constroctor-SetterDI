@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+<!-- SETTER-BASED -->
+
+<bean id="office" class="com.spring.Office">
+<property name="oName" value="siemens"/>
+<property name="floor" value="2"/>
+<property name="address" ref="address"/>
+
+<!--  <constructor-arg>
+ <ref bean="address"/>
+ <constructor-arg ref="address"></constructor-arg>
+-->
+</bean>
+<!-- CONSTRUCTOR-BASED 
+-->
+
+<bean id="address" class="com.spring.Address">
+<constructor-arg value="12/4" type="String" />
+<constructor-arg value="kandanchavadi"/>
+<constructor-arg value="TamilNadu"/>
+
+<!--<property name="offNu" value="12/4"/>
+<property name="street" value="kandanchanvadi"/>
+<property name="state" value="TN"/>-->
+
+</bean>
+</beans>
